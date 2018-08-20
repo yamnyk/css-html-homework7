@@ -11,14 +11,14 @@
 
 .header {
     margin: 50px 0;
-    display: grid;
-    grid-template-columns: 15% 62% 23%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header-logo {
     width: 166px;
-    display: grid;
-    grid-template-columns: 30% 60%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .header-logo img {
@@ -36,8 +36,8 @@
 .header-text {
     width: 105px;
     height: 44px;
-    display: grid;
-    grid-template-rows: 70% 30%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .text-bigger {
@@ -57,7 +57,8 @@
 }
 
 .header-contacts {
-    width: 243px;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-contacts-text {
@@ -68,16 +69,16 @@
 }
 
 .gallery{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 65px 56px;
-    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .gallery-item {
-    display: grid;
-    grid-template-rows: 1fr 0fr;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    margin-bottom: 58px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -111,10 +112,11 @@
     position: absolute;
     bottom: 40px;
     background-color: #f26522;
-    width: 99%;
+    width: 100%;
     height: 28%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     transition: opacity 0.5s ease-in-out;
 
 }
@@ -132,21 +134,22 @@
 }
 
 .tour-info-from {
-    padding-top: 15px;
     font-size: 13px;
     font-weight: 400;
 }
 
 .info-vert-center {
-    display: grid;
-    grid-template-rows: 0fr 1fr;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
 }
 
 .view-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     margin-bottom: 17px;
-    text-align: center;
-    padding-top: 38px;
 }
 
 .details-text {
@@ -159,7 +162,7 @@
 .view-details a:after {
     content: '>';
     margin-left: 15px;
-    /*margin-right: 18px;*/
+    margin-right: 18px;
 }
 
 .gallery-item:hover .tour-info{
